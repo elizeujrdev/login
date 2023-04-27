@@ -200,11 +200,27 @@ background-color: #201b2c;
 
   }
 
-  .pagina {
+  .pagina2 {
 
+    width: 80%;
+    height: 60%;
+    display: flex;
+    
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+  
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .pagina {
+  
     width: 50vw;
-    height: 50vh;
-    margin: 0px auto;
+    height: 100%;
+    margin-top: 20px;
     display: flex;
     text-align: center;
     color: white;
@@ -212,7 +228,8 @@ background-color: #201b2c;
     border-radius: 20px;
     justify-content: center;
     flex-direction: column;
-
+    align-items: center;
+  
   }
 
   .cadastro {
@@ -637,8 +654,91 @@ margin: 0;
   width: 10px;
   transform: translateY(-100px);
   
+}
+
+
+.body1 {
+
+  background-color: #201b2c;
 
 }
 
+.pagina2 {
+
+  width: 80%;
+  height: 60%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+}
+
+.pagina {
+
+  width: 80vw;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  text-align: center;
+  color: white;
+  background-color: #403658;
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.cadastro {
+
+  width: 50vw;
+  height: 100%;
+  transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardcadastro {
+
+  background-color: #2f2741;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.056); 
+  transition: 0.7s;
+}
+
+.cardcadastro > h1 {
+
+  color: #5bffb2;;
+  font-size: 10vw;
+  margin: 20;
+  font-family: 'Prompt', sans-serif;
+  text-shadow: 0 0 20px #00ff8052;
+  box-sizing: border-box;
+}
+
+.maincadastro {
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+  
+} 
 
 }
