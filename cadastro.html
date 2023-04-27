@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <div class="maincadastro">
+    <div class="cadastro" id="cadastro">
+        <div class="cardcadastro">
+            <h1>CADASTRO</h1>
+            <div class="textfield">
+            <form action="login.php" method="post">
+
+                <label for="txtusuario">Usuário:</label>
+                <input type="text" name="usuario" id="txtusuario" placeholder="Usuário">
+
+                <label for="txtemail">E-mail:</label>
+                <input type="email" name="email" id="txtemail" placeholder="E-mail">
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="txtsenha" placeholder="Senha" required minlength="8">
+                
+                <label for="repsenha">Confirmar senha:</label>
+                <input type="password" name="repsenha" id="txtrepsenha" placeholder="Confirmar senha"> 
+             </div>
+
+            <input class="botao" type="button" value="CADASTRAR" onclick="cadastrar()">
+        </form>
+            </div>
+        </div>
+
+
+        <script>
+
+            function cadastrar() {
+
+                var usuario = document.getElementById('txtusuario')
+                var email = document.getElementById('txtemail')
+                var senha = document.getElementById('txtsenha')
+                var repsenha = document.getElementById('txtrepsenha')
+
+                if (usuario.value.length == 0 || email.value.length == 0 || senha.value.length == 0 || repsenha.value.length == 0) {
+
+                    window.alert("[ERRO] Preencha todos os campos necessarios!")
+
+                } else if (senha.value != repsenha.value) {
+
+                    window.alert("As senhas não se coincidem, verifique e tente novamente!")
+                } else {
+                    window.alert("Seus dados foram cadastrados com sucesso, faça Login para entrar!")
+                    window.location.href = 'index.html'
+                }
+
+            }
+        
+            </script>
+</body>
+</html>

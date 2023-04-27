@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="body" onload="nome()">
+    <div class="mainlogin" id="mainlogin">
+        <div class="leftlogin" id="leftlogin">
+            
+    </div>
+
+
+    <div class="rightlogin" id="rightlogin">
+        <div class="cardlogin" id="cardlogin">
+            
+            <h1>LOGIN</h1>
+        
+            <div class="textfield" id="textfield">
+            <form action="login.php" method="post">
+                <label for="txtusuario">Usuário:</label>
+                <input type="text" name="usuario" id="txtusuario" placeholder="Usuário">
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="txtsenha" placeholder="Senha">
+             </div>
+
+             <p>Não tem uma conta? <a href="cadastro.html">Crie uma!</a></p>
+             <a href="esqueci.html">Não consegue acessar sua conta?</a>
+
+            <input class="botao" id="botao" type="button" value="LOGIN" onclick="logar()">
+        </form>
+            </div>
+        </div>
+
+        <div class="icone" onclick="tema()">
+                
+            <i class="fa-solid fa-sun" id="icone"></i></div>
+<script>
+        function nome() {
+            var fulano = window.document.getElementById('leftlogin')
+            var tela = window.document.getElementById('rightlogin')
+            var nome = window.prompt ("Como quer ser chamado?")
+            var img = document.createElement('img')
+            var maiusculo = nome.substring(0,1).toUpperCase().concat(nome.substring(1))
+
+            fulano.innerHTML = `<h1 id="titulo">Seja bem vindo(a) novamente ${maiusculo}.<br>Faça Login para ter acesso ao painel.</h1>`
+            img.setAttribute('id', 'foto')
+            img.setAttribute ('src', 'astronaut-animate.svg')
+            fulano.appendChild(img)
+            tela.style.display = 'flex' 
+            
+        }
+
+        function logar() {
+
+            var usuario = document.getElementById('txtusuario')
+            var senha = document.getElementById('txtsenha')
+
+            if (usuario.value.length == 0 || senha.value.length == 0) {
+
+            window.alert("[ERRO] Você deixou não preencheu todos os campos.") 
+            } else {
+
+                window.location.href = "login.html"
+            }
+        }
+
+        function tema() {
+
+        var mode = document.getElementById('icone')
+        var body = document.getElementById('body')
+        var mainlogin = document.getElementById('mainlogin')
+        var rightlogin = document.getElementById('rightlogin')
+        var cardlogin = document.getElementById('cardlogin')
+        var textfield = document.getElementById('textfield')
+        var botao = document.getElementById('botao')
+        var titulo = document.getElementById('titulo')
+        var imagem = document.querySelector('img')
+        
+        if (mode.classList.contains('fa-sun')) {
+    
+            mode.classList.remove('fa-sun')
+            mode.classList.add('fa-moon')
+
+            body.classList.add('dark')
+            mainlogin.classList.add('dark')
+            leftlogin.classList.add('dark')
+            rightlogin.classList.add('dark')
+            cardlogin.classList.add('dark')
+            textfield.classList.add('dark')
+            botao.classList.add('dark')
+            titulo.classList.add('dark')
+            imagem.src = "sup-animate.svg"
+            mode.style.color = "#201b2c"
+            mode.style.transition = "1.5s"
+            imagem.style.transition = "1.5s"
+           
+
+            return;
+        }
+
+        mode.classList.remove('fa-moon')
+        mode.classList.add('fa-sun')
+        body.classList.remove('dark')
+        mainlogin.classList.remove('dark')
+        leftlogin.classList.remove('dark')
+        rightlogin.classList.remove('dark')
+        cardlogin.classList.remove('dark')
+        textfield.classList.remove('dark')
+        botao.classList.remove('dark')
+        titulo.classList.remove('dark')
+        imagem.src = "astronaut-animate.svg"
+        imagem.style.transition = "1.5s"
+        mode.style.color = "lightgrey"
+        mode.style.transition = "1.5s"
+        
+    }
+        
+</script>
+    
+</body>
+</html>
