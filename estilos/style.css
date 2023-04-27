@@ -142,10 +142,11 @@ background-color: #201b2c;
       display: block;
       font-size: 30px;
       position: relative;
-      bottom: 40%;
-      right: 7.5%;
+      top: 100px;
+      left: 90%;
       cursor: pointer;
       color: lightgrey;
+      width: 10px;
 
   }
 
@@ -510,8 +511,7 @@ background-color: #201b2c;
 .leftlogin {
 
 width: 50%;
-height: 70vh;
-margin-top: 50px;
+height: 800px;
 
 
 }
@@ -586,9 +586,16 @@ margin-top: 50px;
   }
 
   .icone {
-    transform: translate(140%, -1070%);
-    margin: 0px auto;
     display: block;
+    font-size: 30px;
+    position: relative;
+    left: 48%;
+    cursor: pointer;
+    color: lightgrey;
+    width: 10px;
+    transform: translateY(-100px);
+    
+
   }
 
   .dark#cardlogin > h1::after{
