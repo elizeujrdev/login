@@ -519,7 +519,7 @@ margin: 0;
 
 }
 
-.leftlogin#foto {
+.leftlogin > img#foto {
 
     width: 100%;
     height: 100%;
