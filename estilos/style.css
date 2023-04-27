@@ -504,7 +504,7 @@ background-color: #201b2c;
     display: block;
     font-size: 15px;
     height: auto;
-    width: 100%;
+    width: 100vw;
     text-align: center;
 
 }
@@ -552,6 +552,8 @@ margin: 0;
 }
 
 .dark#mainlogin {
+
+  height: 20%;
   flex-direction: column;
 }
 
@@ -567,11 +569,13 @@ margin: 0;
 
 .dark#leftlogin {
 
-  width: 50%;
-  height: 70vh;
-  margin-bottom: 10px;
-  
-  }
+width: 50%;
+height: 30%;
+position: relative;
+margin: 0;
+
+
+}
 
   .dark#rightlogin {
 
@@ -613,5 +617,28 @@ margin: 0;
     border-radius: 30px;
 
   }
+
+  .dark#leftlogin > img#foto {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.dark#icone {
+  display: block;
+  font-size: 30px;
+  position: relative;
+  left: 48%;
+  cursor: pointer;
+  color: lightgrey;
+  width: 10px;
+  transform: translateY(-100px);
+  
+
+}
+
 
 }
