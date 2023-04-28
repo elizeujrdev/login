@@ -8,9 +8,9 @@
 }
 
 body {
-
-margin: 0px;
-background-color: #201b2c;
+  overflow-x: hidden;
+  margin: 0px;
+  background-color: #201b2c;
 }
 
 .mainlogin {
